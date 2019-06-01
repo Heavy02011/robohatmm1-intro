@@ -39,6 +39,7 @@ cd circuitpython/ports/atmel-samd/boards/
 cp -r ../../../mm1-hat-cpy-native/firmware/boards/robohatmm1_rev2/ boards/robohatmm1_rev2
 
 #path?#
+(carnd-tf16) rainer@neuron:~/dev/33-robohatmm1/circuitpython/ports/atmel-samd$
 make -j8 BOARD=robohatmm1_rev2
 
 ```
