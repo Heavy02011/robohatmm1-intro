@@ -157,7 +157,28 @@ g. installing firmware according to [the repo mm1-hat-cpy-native](https://github
 - Done.
 ```
 
-# 3 Connect over serial port
+# 3 short test with blinking led & printing before flashing
+
+a. put this code in code.txt on the usb device called circuitpy
+```
+import board
+import digitalio
+import time
+
+led = digitalio.DigitalInOut(board.D13)
+led.direction = digitalio.Direction.OUTPUT
+
+a = 0
+while True:
+    led.value = True
+    time.sleep(1.5)
+    led.value = False
+    time.sleep(0.5)
+    print('cool',a)
+    a += 1
+```
+
+b. Connect over serial port
 
 ```
 (carnd-tf16) rainer@neuron:~/dev/33-robohatmm1$ dmesg | grep tty
@@ -166,7 +187,7 @@ g. installing firmware according to [the repo mm1-hat-cpy-native](https://github
 [ 4856.235010] cdc_acm 1-5:1.0: ttyACM0: USB ACM device
 
 (carnd-tf16) rainer@neuron:~/dev/33-robohatmm1$ 
-sudo putty /dev/ttyS0 -serial -sercfg 115200,8,n,1,N
+sudo putty /dev/ttyACM0 -serial -sercfg 115200,8,n,1,N
 ```
 
 # 4 Arduino install (source: wallarug)
