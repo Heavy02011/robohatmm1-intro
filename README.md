@@ -150,6 +150,15 @@ Converting to uf2, output size: 372736, start address: 0x2000
 Wrote 372736 bytes to build-robohatmm1_rev2/firmware.uf2.
 ```
 
+g. installing firmware according to [the repo mm1-hat-cpy-native](https://github.com/robotics-masters/mm1-hat-cpy-native/tree/master/firmware)
+```
+- attach Robo HAT MM1 to your computer via USB.
+- Double Tap 'reset' button to put board into UF2 Bootloader mode
+- Copy firmware.uf2 from the build folder to the USB Drive called "ROBOBOOT".
+- Wait for CircuitPython to be installed (about 5 seconds).
+- Done.
+```
+
 # 3 Arduino install (source: wallarug)
 
 For Arduino, you can install the board definition file into Arduino IDE 1.8+ using the package_robohat_index.json file.
