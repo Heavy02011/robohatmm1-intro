@@ -189,6 +189,8 @@ b. Connect over serial port
 (carnd-tf16) rainer@neuron:~/dev/33-robohatmm1$ 
 sudo putty /dev/ttyACM0 -serial -sercfg 115200,8,n,1,N
 ```
+![putty output](https://github.com/Heavy02011/robohatmm1-intro/blob/master/images/codetxt-output1.png)
+
 
 # 4 Arduino install (source: wallarug)
 
