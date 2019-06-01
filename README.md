@@ -213,3 +213,8 @@ d. select robohat to install
 e. setup interface: /dev/ttyACM0 (in my case)
 f. select robohat as board
 g. have fun with the Arduino part
+
+add user to group dialout in ubuntu
+```
+sudo gpasswd -a username dialout
+```
