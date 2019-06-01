@@ -157,7 +157,19 @@ g. installing firmware according to [the repo mm1-hat-cpy-native](https://github
 - Done.
 ```
 
-# 3 Arduino install (source: wallarug)
+# 3 Connect over serial port
+
+```
+(carnd-tf16) rainer@neuron:~/dev/33-robohatmm1$ dmesg | grep tty
+[    0.000000] console [tty0] enabled
+[    0.513222] 00:01: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[ 4856.235010] cdc_acm 1-5:1.0: ttyACM0: USB ACM device
+
+(carnd-tf16) rainer@neuron:~/dev/33-robohatmm1$ 
+sudo putty /dev/ttyS0 -serial -sercfg 115200,8,n,1,N
+```
+
+# 4 Arduino install (source: wallarug)
 
 For Arduino, you can install the board definition file into Arduino IDE 1.8+ using the package_robohat_index.json file.
 
