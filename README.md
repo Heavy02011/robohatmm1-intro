@@ -202,3 +202,14 @@ robotics-masters/mm1-hat-arduino
 Repository for storing Arduino related files and custom board definition. - robotics-masters/mm1-hat-arduino
 The print output is in a serial port on your computer
 use Putty or similar to connect to it.
+
+a. open Arduino IDE
+b. open preferences and enter under section custom boards url
+```
+https://raw.githubusercontent.com/robotics-masters/mm1-hat-arduino/master/custom_board/package_robohat_index.json
+```
+c. open board manager
+d. select robohat to install
+e. setup interface: /dev/ttyACM0 (in my case)
+f. select robohat as board
+g. have fun with the Arduino part
