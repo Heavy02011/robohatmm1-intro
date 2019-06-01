@@ -39,9 +39,7 @@ cd circuitpython/
 git submodule update --init --recursive
 make -C mpy-cross
 
-#cd circuitpython/ports/atmel-samd
 cd circuitpython/ports/atmel-samd/boards/
-(carnd-tf16) rainer@neuron:~/dev/33-robohatmm1/circuitpython/ports/atmel-samd$ 
 cp -r ../../../mm1-hat-cpy-native/firmware/boards/robohatmm1_rev2/ boards/robohatmm1_rev2
 cp -r ../../../mm1-hat-cpy-native/firmware/boards/robohatmm1/      boards/robohatmm1
 ```
