@@ -95,7 +95,11 @@ drwxr-xr-x  2 rainer rainer 4096 Jun  1 17:07 uchip/
 drwxr-xr-x  2 rainer rainer 4096 Jun  1 17:07 ugame10/
 ```
 
-
+additional setup according to [circuitpython repo](https://github.com/adafruit/circuitpython/tree/master/ports/atmel-samd)
+```
+sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa
+sudo apt-get install gcc-arm-embedded
+```
 
 
 my approach
