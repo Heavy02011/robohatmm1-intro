@@ -37,22 +37,21 @@ make -C mpy-cross
 cd circuitpython/ports/atmel-samd/boards/
 (carnd-tf16) rainer@neuron:~/dev/33-robohatmm1/circuitpython/ports/atmel-samd$ 
 cp -r ../../../mm1-hat-cpy-native/firmware/boards/robohatmm1_rev2/ boards/robohatmm1_rev2
+```
 
-#path?#
+compiling (???path???)
+```
 (carnd-tf16) rainer@neuron:~/dev/33-robohatmm1/circuitpython/ports/atmel-samd$
-make -j8 BOARD=robohatmm1_rev2
-
+make -j8 BOARD=robohatmm1
 ```
 
-output 
+output compiling
 ```
-(carnd-tf16) rainer@neuron:~/dev/33-robohatmm1/circuitpython/ports/atmel-samd$ make -j8 BOARD=robohatmm1Use make V=1, make V=2 or set BUILD_VERBOSE similarly in your environment to increase build verbosity.
+Use make V=1, make V=2 or set BUILD_VERBOSE similarly in your environment to increase build verbosity.
 xargs: arm-none-eabi-gcc: Datei oder Verzeichnis nicht gefunden
 ../../py/mkrules.mk:81: recipe for target 'build-robohatmm1/genhdr/qstr.i.last' failed
 make: *** [build-robohatmm1/genhdr/qstr.i.last] Error 127
 make: *** Datei „build-robohatmm1/genhdr/qstr.i.last“ wird gelöscht
-(carnd-tf16) rainer@neuron:~/dev/33-robohatmm1/circuitpython/ports/atmel-samd$ 
-
 ```
 
 
