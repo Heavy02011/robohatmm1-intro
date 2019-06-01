@@ -7,7 +7,9 @@ documentation of my experiments with https://roboticsmasters.co/pages/robo-hat-m
 https://learn.adafruit.com/circuitpython-essentials/circuitpython-essentials
 
 
-# 2 generate firmware following [mm1-hat-cpy-native](https://github.com/robotics-masters/mm1-hat-cpy-native/tree/master/firmware)
+# 2 Generate firmware 
+
+start using [the repo mm1-hat-cpy-native](https://github.com/robotics-masters/mm1-hat-cpy-native/tree/master/firmware)
 
 original
 ```
