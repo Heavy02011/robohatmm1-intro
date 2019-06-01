@@ -12,7 +12,7 @@ https://learn.adafruit.com/circuitpython-essentials/circuitpython-essentials
 
 start using [the repo mm1-hat-cpy-native](https://github.com/robotics-masters/mm1-hat-cpy-native/tree/master/firmware)
 
-original
+a. original approach
 ```
 git clone https://github.com/robotics-masters/mm1-hat-cpy-native
 git clone https://github.com/adafruit/circuitpython/
@@ -25,7 +25,27 @@ cp -r ../../../mm1-hat-cpy-native/firmware/mm1_hat_nonflash boards/mm1_hat_nonfl
 make -j8 BOARD=mm1_hat_nonflash
 ```
 
-list of boards directory
+b. required additional setup according to [circuitpython repo](https://github.com/adafruit/circuitpython/tree/master/ports/atmel-samd)
+```
+sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa
+sudo apt-get install gcc-arm-embedded
+```
+
+c. my approach - preparing files
+```
+git clone https://github.com/robotics-masters/mm1-hat-cpy-native
+git clone https://github.com/adafruit/circuitpython/
+cd circuitpython/
+git submodule update --init --recursive
+make -C mpy-cross
+
+#cd circuitpython/ports/atmel-samd
+cd circuitpython/ports/atmel-samd/boards/
+(carnd-tf16) rainer@neuron:~/dev/33-robohatmm1/circuitpython/ports/atmel-samd$ 
+cp -r ../../../mm1-hat-cpy-native/firmware/boards/robohatmm1_rev2/ boards/robohatmm1_rev2
+```
+
+d. list of boards directory
 ```
 (carnd-tf16) rainer@neuron:~/dev/33-robohatmm1/circuitpython/ports/atmel-samd/boards$ ll
 insgesamt 256
@@ -95,42 +115,39 @@ drwxr-xr-x  2 rainer rainer 4096 Jun  1 17:07 uchip/
 drwxr-xr-x  2 rainer rainer 4096 Jun  1 17:07 ugame10/
 ```
 
-additional setup according to [circuitpython repo](https://github.com/adafruit/circuitpython/tree/master/ports/atmel-samd)
-```
-sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa
-sudo apt-get install gcc-arm-embedded
-```
-
-
-my approach
-```
-git clone https://github.com/robotics-masters/mm1-hat-cpy-native
-git clone https://github.com/adafruit/circuitpython/
-cd circuitpython/
-git submodule update --init --recursive
-make -C mpy-cross
-
-#cd circuitpython/ports/atmel-samd
-cd circuitpython/ports/atmel-samd/boards/
-(carnd-tf16) rainer@neuron:~/dev/33-robohatmm1/circuitpython/ports/atmel-samd$ 
-cp -r ../../../mm1-hat-cpy-native/firmware/boards/robohatmm1_rev2/ boards/robohatmm1_rev2
-```
-
-compiling (???path???)
+e. compiling
 ```
 (carnd-tf16) rainer@neuron:~/dev/33-robohatmm1/circuitpython/ports/atmel-samd$
 make -j8 BOARD=robohatmm1
+make -j8 BOARD=robohatmm1_rev2
 ```
 
-output compiling
+f. compiler output
 ```
+(carnd-tf16) rainer@neuron:~/dev/33-robohatmm1/circuitpython/ports/atmel-samd$ 
+make -j8 BOARD=robohatmm1
+
 Use make V=1, make V=2 or set BUILD_VERBOSE similarly in your environment to increase build verbosity.
-xargs: arm-none-eabi-gcc: Datei oder Verzeichnis nicht gefunden
-../../py/mkrules.mk:81: recipe for target 'build-robohatmm1/genhdr/qstr.i.last' failed
-make: *** [build-robohatmm1/genhdr/qstr.i.last] Error 127
-make: *** Datei „build-robohatmm1/genhdr/qstr.i.last“ wird gelöscht
-```
+QSTR updated
 
+19352 bytes free in flash out of 253440 bytes ( 247.5 kb ).
+25776 bytes free in ram for stack out of 32768 bytes ( 32.0 kb ).
+
+Converting to uf2, output size: 468480, start address: 0x2000
+Wrote 468480 bytes to build-robohatmm1/firmware.uf2.
+
+(carnd-tf16) rainer@neuron:~/dev/33-robohatmm1/circuitpython/ports/atmel-samd$ 
+make -j8 BOARD=robohatmm1_rev2
+
+Use make V=1, make V=2 or set BUILD_VERBOSE similarly in your environment to increase build verbosity.
+QSTR updated
+
+1724 bytes free in flash out of 187904 bytes ( 183.5 kb ).
+25952 bytes free in ram for stack out of 32768 bytes ( 32.0 kb ).
+
+Converting to uf2, output size: 372736, start address: 0x2000
+Wrote 372736 bytes to build-robohatmm1_rev2/firmware.uf2.
+```
 
 # 3 Arduino install (source: wallarug)
 
