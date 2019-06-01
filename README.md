@@ -1,6 +1,7 @@
 # robohatmm1-intro
 
 documentation of my experiments with https://roboticsmasters.co/pages/robo-hat-mm1/
+see campaign https://www.crowdsupply.com/robotics-masters/robo-hat-mm1 for getting one
 
 # 1 Learning Links (source: wallarug)
 
