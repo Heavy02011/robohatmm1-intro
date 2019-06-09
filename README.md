@@ -191,8 +191,28 @@ sudo putty /dev/ttyACM0 -serial -sercfg 115200,8,n,1,N
 ```
 ![putty output](https://github.com/Heavy02011/robohatmm1-intro/blob/master/images/codetxt-output1.png)
 
+# 4 Installing MPU9250 imu library on board
 
-# 4 Arduino install (source: wallarug)
+a. clone driver into circuitpython
+```
+cd circuitpython/frozen/
+git clone https://github.com/robotics-masters/RoboticsMasters_CircuitPython_MPU9250.git
+```
+
+b. tell make file to include libary
+```
+(carnd-tf16) rainer@neuron:~/dev/33-robohatmm1/circuitpython/ports/atmel-samd/boards/robohatmm3
+vim mpconfigboard.mk:
+FROZEN_MPY_DIRS += $(TOP)/frozen/RoboticsMasters_CircuitPython_MPU9250
+```
+
+c. make -j8 clean BOARD=robohatmm3
+
+d. make -j8 BOARD=robohatmm3
+
+e. install on board, see above
+
+# 5 Arduino install (source: wallarug)
 
 For Arduino, you can install the board definition file into Arduino IDE 1.8+ using the package_robohat_index.json file.
 
