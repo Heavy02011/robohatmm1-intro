@@ -212,6 +212,8 @@ d. make -j8 BOARD=robohatmm3
 
 e. install on board, see above
 
+![imu output](https://github.com/Heavy02011/robohatmm1-intro/blob/master/images/imu.png)
+
 # 5 Arduino install (source: wallarug)
 
 For Arduino, you can install the board definition file into Arduino IDE 1.8+ using the package_robohat_index.json file.
@@ -230,6 +232,7 @@ https://raw.githubusercontent.com/robotics-masters/mm1-hat-arduino/master/custom
 ```
 c. open board manager
 d. select robohat to install
+![board manager](https://github.com/Heavy02011/robohatmm1-intro/blob/master/images/install-arduino.png)
 e. setup interface: /dev/ttyACM0 (in my case)
 f. select robohat as board
 g. have fun with the Arduino part
