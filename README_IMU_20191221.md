@@ -6,7 +6,7 @@
 
 ![](https://github.com/Heavy02011/robohatmm1-intro/blob/master/images/libraryfiles_20191221.png)
 
-## 2. run imu.py test code
+## 2. run imu.py [test code](https://github.com/robotics-masters/RoboticsMasters_CircuitPython_MPU9250/blob/master/imu.py)
 
 ![](https://github.com/Heavy02011/robohatmm1-intro/blob/master/images/imu_test_code.png)
 
