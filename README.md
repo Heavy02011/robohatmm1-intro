@@ -190,11 +190,14 @@ b. Connect over serial port
 sudo putty /dev/ttyACM0 -serial -sercfg 115200,8,n,1,N
 ```
 
-## new 
+### new, Dec 21st, 2019 
 
 ```
 screen /dev/cu.usbmodem14601 115200 -L
 ```
+[screen command on mac](https://software.intel.com/en-us/setting-up-serial-terminal-on-system-with-mac-os-x)
+
+
 ![putty output](https://github.com/Heavy02011/robohatmm1-intro/blob/master/images/codetxt-output1.png)
 
 # 4 Installing MPU9250 imu library on board
