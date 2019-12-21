@@ -1,4 +1,5 @@
-# Get IMU demo running, Dec 21st 2019
+# IMU Demo
+Dec 21st 2019
 
 ## 1. Connect 
 your robohatmm1 to the usb port and wait to see the drive name CIRCUITPY
