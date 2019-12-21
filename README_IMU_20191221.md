@@ -10,7 +10,9 @@ all lib files [from](https://github.com/robotics-masters/mm1-hat-cpy-native/tree
 ![](https://github.com/Heavy02011/robohatmm1-intro/blob/master/images/libraryfiles_20191221.png)
 
 ## 2. Run
+copy 
 [imu.py test code](https://github.com/robotics-masters/RoboticsMasters_CircuitPython_MPU9250/blob/master/imu.py)
+as code.py to CIRCUITPY
 
 ![](https://github.com/Heavy02011/robohatmm1-intro/blob/master/images/imu_test_code.png)
 
