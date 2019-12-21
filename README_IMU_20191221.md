@@ -1,8 +1,8 @@
-# Update Dec 21st 2019
+# Get IMU demo running, Dec 21st 2019
 
-actions to get it running
+## 1. Connect your robohatmm1 to the the usb port and wait to see the drive name CIRCUITPY
 
-## 1. copy all lib files from saved prototype to /lib on cirtuitpy
+## 2. copy all lib files [from](https://github.com/robotics-masters/mm1-hat-cpy-native/tree/master/USB/lib) to /lib on CIRCUITPY (the usb drive!)
 
 ![](https://github.com/Heavy02011/robohatmm1-intro/blob/master/images/libraryfiles_20191221.png)
 
@@ -10,6 +10,6 @@ actions to get it running
 
 ![](https://github.com/Heavy02011/robohatmm1-intro/blob/master/images/imu_test_code.png)
 
-## 3. show imu results
+## 4. show imu results
 
 ![](https://github.com/Heavy02011/robohatmm1-intro/blob/master/images/get_results_on_screen.png)
