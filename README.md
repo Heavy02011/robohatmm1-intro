@@ -189,6 +189,12 @@ b. Connect over serial port
 (carnd-tf16) rainer@neuron:~/dev/33-robohatmm1$ 
 sudo putty /dev/ttyACM0 -serial -sercfg 115200,8,n,1,N
 ```
+
+## new 
+
+```
+screen /dev/cu.usbmodem14601 115200 -L
+```
 ![putty output](https://github.com/Heavy02011/robohatmm1-intro/blob/master/images/codetxt-output1.png)
 
 # 4 Installing MPU9250 imu library on board
