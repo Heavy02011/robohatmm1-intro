@@ -26,7 +26,7 @@ imu results
 Dec 22st 2019
 
 ## 1. Have a look what I2C adresses are used
-
+![](https://github.com/Heavy02011/robohatmm1-intro/blob/master/images/robohat_addr.png)
 
 ## 2. edit myconfig.py
 ```
