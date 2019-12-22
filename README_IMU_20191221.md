@@ -1,4 +1,4 @@
-# IMU Demo
+# A IMU Demo
 Dec 21st 2019
 
 ## 1. Connect 
@@ -20,3 +20,23 @@ as code.py to CIRCUITPY
 imu results
 
 ![](https://github.com/Heavy02011/robohatmm1-intro/blob/master/images/get_results_on_screen.png)
+
+
+# B IMU running with Donkeycar
+Dec 22st 2019
+
+## 1. edit myconfig.py
+```
+# #9865, over rides only if needed, ie. TX2..
+PCA9685_I2C_ADDR = 0x41 #0x40     #I2C address, use i2cdetect to validate this number
+PCA9685_I2C_BUSNUM = 1 #None   #None will auto detect, which is fine on the pi. But other platforms should specify the bus num.
+
+# #IMU
+HAVE_IMU = True #False                #when true, this add a Mpu6050 part and records the data. Can be used with a 
+  
+# #ROBOHAT MM1
+HAVE_ROBOHAT = True #False             #set to true when using the Robo HAT MM1 from Robotics Masters.  This will change to RC Control.
+
+
+
+```
