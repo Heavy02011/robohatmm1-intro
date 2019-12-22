@@ -1,4 +1,4 @@
-# robohatmm1-intro
+# robohatmm1-intro - Old Hints need an update
 
 documentation of my experiments with https://roboticsmasters.co/pages/robo-hat-mm1/
 see campaign https://www.crowdsupply.com/robotics-masters/robo-hat-mm1 for getting one
