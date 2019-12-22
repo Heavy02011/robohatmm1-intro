@@ -25,7 +25,10 @@ imu results
 # B IMU running with Donkeycar
 Dec 22st 2019
 
-## 1. edit myconfig.py
+## 1. Have a look what I2C adresses are used
+
+
+## 2. edit myconfig.py
 ```
 # #9865, over rides only if needed, ie. TX2..
 PCA9685_I2C_ADDR = 0x41 #0x40     #I2C address, use i2cdetect to validate this number
@@ -37,6 +40,12 @@ HAVE_IMU = True #False                #when true, this add a Mpu6050 part and re
 # #ROBOHAT MM1
 HAVE_ROBOHAT = True #False             #set to true when using the Robo HAT MM1 from Robotics Masters.  This will change to RC Control.
 
-
-
 ```
+
+## 3. edit manage.py
+correct the address of the IMU which is 0x69 for the robohat
+
+![](https://github.com/Heavy02011/robohatmm1-intro/blob/master/images/robohat_ima_addr.png)
+
+and the result after recording 
+![](https://github.com/Heavy02011/robohatmm1-intro/blob/master/images/imu_sample_json.png)
